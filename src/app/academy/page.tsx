@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Helper function for asset paths
+const getAssetPath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/Fatal-error-website' : '';
+  return `${basePath}${path}`;
+};
+
 interface Course {
   id: string;
   title: string;
@@ -201,7 +207,7 @@ export default function Academy() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/images/fatal error logo .png"
+                src={getAssetPath("/images/fatal error logo .png")}
                 alt="Fatal Error Logo"
                 width={40}
                 height={40}
@@ -223,7 +229,7 @@ export default function Academy() {
       <section className="pt-24 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <Image
-            src="/images/fatal error logo .png"
+            src={getAssetPath("/images/fatal error logo .png")}
             alt="Fatal Error Logo Background"
             width={600}
             height={600}
@@ -353,7 +359,7 @@ export default function Academy() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Image
-                  src="/images/fatal error logo .png"
+                  src={getAssetPath("/images/fatal error logo .png")}
                   alt="Fatal Error Logo"
                   width={32}
                   height={32}
