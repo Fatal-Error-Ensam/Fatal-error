@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Fatal-error-website' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/Fatal-error-website' : '',
+  // Remove basePath and assetPrefix for GitHub Pages to work correctly
+  // GitHub Pages will handle the repository name automatically
 };
 
 export default nextConfig;
