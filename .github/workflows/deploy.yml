@@ -24,28 +24,23 @@ jobs:
       run: npm ci
       
     - name: Run Linting
-      run: npm run lint
+      run: npm run lint:check
+      continue-on-error: false
       
     - name: Run Type Check
-      run: npm run build
+      run: npm run type-check
       continue-on-error: false
       
     - name: Build Next.js Application
       run: npm run build
       env:
         NODE_ENV: production
-        
-    - name: Export Static Files
-      run: npm run export
-      continue-on-error: true
       
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: nextjs-build
-        path: |
-          .next/
-          out/
+        path: out/
         retention-days: 30
         
     # Deploy to GitHub Pages
@@ -55,7 +50,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
-        cname: fatal-error.dev  # Optional: Add your custom domain here
+        # cname: fatal-error.dev  # Uncomment and add your custom domain here
         
     # Optional: Deploy to Vercel (uncomment if you want Vercel deployment)
     # - name: Deploy to Vercel

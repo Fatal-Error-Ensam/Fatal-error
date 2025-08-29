@@ -6,8 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next build && next export",
+    "lint": "next lint --fix",
+    "lint:check": "next lint",
+    "type-check": "tsc --noEmit",
+    "export": "next export",
     "deploy": "npm run build && npm run export"
   },
   "dependencies": {
