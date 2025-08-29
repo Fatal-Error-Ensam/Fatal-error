@@ -6,8 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix",
-    "lint:check": "next lint",
+    "lint": "eslint --fix .",
+    "lint:check": "eslint .",
     "type-check": "tsc --noEmit",
     "export": "next export",
     "deploy": "npm run build && npm run export"
