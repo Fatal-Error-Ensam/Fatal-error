@@ -9,7 +9,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
                         <Link href="/" className="flex items-center space-x-3">
-              <Image
+        <Image
                 src="/images/fatal error logo .png"
                 alt="Fatal Error Logo"
                 width={40}
@@ -91,7 +91,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">What We Do</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Dive into three exciting worlds that define our club's passion for technology
+              Dive into three exciting worlds that define our club&apos;s passion for technology
             </p>
           </div>
           
@@ -160,13 +160,13 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-black mb-4">Ready to Level Up?</h2>
           <p className="text-xl text-black/80 mb-8">
             Join our community of tech enthusiasts, programmers and competetors. 
-            Let's build the future together, one line of code at a time.
+            Let&apos;s build the future together, one line of code at a time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="https://chat.whatsapp.com/Hu2Ic0x09qAE88ZWvrsDke?mode=ems_copy_c" 
-              target="_blank" 
-              rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
               className="bg-black text-green-400 font-semibold px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors inline-flex items-center justify-center gap-2"
             >
               <span>💬</span>
