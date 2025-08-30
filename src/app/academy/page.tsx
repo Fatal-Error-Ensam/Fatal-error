@@ -204,29 +204,47 @@ export default function Academy() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-gray-800 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-3">
-              <Image
-                src={getAssetPath("/images/fatal error logo .png")}
-                alt="Fatal Error Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10"
-              />
-              <span className="text-xl font-bold">Fatal Error</span>
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors">Home</Link>
-              <Link href="/academy" className="text-green-400 hover:text-green-300 transition-colors">Academy</Link>
-              <a href="#projects" className="text-gray-300 hover:text-green-400 transition-colors">Projects</a>
-              <a href="#contact" className="text-gray-300 hover:text-green-400 transition-colors">Contact</a>
+          <div className="flex items-center h-32">
+            {/* Left: Logo */}
+            <div className="flex-1">
+              <Link href="/" className="inline-flex items-center space-x-4">
+                <Image
+                  src={getAssetPath("/images/fatal error logo .png")}
+                  alt="Fatal Error Logo"
+                  width={128}
+                  height={128}
+                  className="w-32 h-32"
+                />
+              </Link>
+            </div>
+
+            {/* Center: Nav links */}
+            <div className="hidden md:flex items-center justify-center gap-14 text-xl">
+              <Link href="/#home" className="text-gray-300 hover:text-green-400 transition-colors">Home</Link>
+              <Link href="/#about" className="text-gray-300 hover:text-green-400 transition-colors">About</Link>
+              <Link href="/#partners" className="text-gray-300 hover:text-green-400 transition-colors">Partners</Link>
+              <Link href="/#contact" className="text-gray-300 hover:text-green-400 transition-colors">Contact Us</Link>
+              <Link href="/academy" className="text-gray-300 hover:text-green-400 transition-colors">Academy</Link>
+            </div>
+
+            {/* Right: Socials */}
+            <div className="flex-1 hidden md:flex justify-end items-center gap-7 text-gray-300">
+              <a href="https://www.linkedin.com/company/fatal-error-club-ensam" aria-label="LinkedIn" className="hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-7 h-7"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://www.instagram.com/fatalerrorensamr/" aria-label="Instagram" className="hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg>
+              </a>
+              <a href="https://github.com/Fatal-Error-Ensam" aria-label="GitHub" className="hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.4.7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.8.5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
+              </a>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 relative overflow-hidden">
+      <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <Image
             src={getAssetPath("/images/fatal error logo .png")}
@@ -355,56 +373,25 @@ export default function Academy() {
       {/* Footer */}
       <footer className="bg-gray-900 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Image
-                  src={getAssetPath("/images/fatal error logo .png")}
-                  alt="Fatal Error Logo"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
-                <span className="text-xl font-bold">Fatal Error</span>
-              </div>
-              <p className="text-gray-400">
-                Empowering the next generation of technologists through code, creativity, and community.
-              </p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="flex items-center gap-3">
+              <Image
+                src={getAssetPath("/images/fatal error logo .png")}
+                alt="Fatal Error Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+              <span className="text-xl font-bold">Fatal Error</span>
             </div>
-            
-            <div>
-              <h4 className="text-green-400 font-semibold mb-4">Learning Tracks</h4>
-              <div className="space-y-2">
-                <a href="#ai" className="block text-gray-400 hover:text-green-400 transition-colors">Artificial Intelligence</a>
-                <a href="#ml" className="block text-gray-400 hover:text-green-400 transition-colors">Machine Learning</a>
-                <a href="#data" className="block text-gray-400 hover:text-green-400 transition-colors">Data Science</a>
-                <a href="#cybersec" className="block text-gray-400 hover:text-green-400 transition-colors">Cybersecurity</a>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-green-400 font-semibold mb-4">Resources</h4>
-              <div className="space-y-2">
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">Google Colab</a>
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">Course Materials</a>
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">Community Forum</a>
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">Help & Support</a>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-green-400 font-semibold mb-4">Connect</h4>
-              <div className="space-y-2">
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">Discord</a>
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">GitHub</a>
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">Twitter</a>
-                <a href="#" className="block text-gray-400 hover:text-green-400 transition-colors">LinkedIn</a>
-              </div>
+            <div className="flex items-center gap-6 text-gray-300">
+              <a href="https://www.linkedin.com/company/fatal-error-club-ensam" className="hover:text-white">LinkedIn</a>
+              <a href="https://www.instagram.com/fatalerrorensamr/" className="hover:text-white">Instagram</a>
+              <a href="https://github.com/Fatal-Error-Ensam" className="hover:text-white">GitHub</a>
             </div>
           </div>
-          
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Fatal Error Academy. All rights reserved. Built with ❤️ and lots of ☕</p>
+            <p>&copy; {new Date().getFullYear()} Fatal Error Academy. All rights reserved.</p>
           </div>
         </div>
       </footer>
