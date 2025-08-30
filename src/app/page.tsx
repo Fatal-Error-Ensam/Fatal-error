@@ -146,90 +146,107 @@ export default function Home() {
       </section>
 
       {/* Executive Board Section */}
-      <section id="board" className="py-20 bg-black">
+      <section id="board" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">Executive Board</h2>
-            <p className="text-gray-400 mt-2">12 members leading vision, operations, and tracks.</p>
+          <div className="text-center mb-14">
+            <h2 className="text-5xl font-bold">Executive Board</h2>
+            <p className="text-gray-400 mt-3 text-lg">12 members leading vision, operations, and tracks.</p>
           </div>
 
-          {/* Tier 1 */}
+          {/* Row 1: 1 */}
           <div className="flex justify-center mb-10">
-            <div className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-6 w-full max-w-sm text-center">
-              <div className="mx-auto w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-2xl -mt-12">👤</div>
-              <h3 className="mt-4 text-lg font-semibold">ANAS AMCHAAR</h3>
-              <div className="text-gray-400 text-xs">President</div>
-              <p className="text-gray-400 text-sm mt-1">Leads the club's vision and overall strategy.</p>
-              <div className="flex items-center justify-center gap-4 mt-3 text-gray-300">
-                <a href="#" aria-label="LinkedIn" className="hover:text-green-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
-                <a href="#" aria-label="GitHub" className="hover:text-green-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.4.7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.8.5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Tier 2 */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
-            {[{name:'Ilyas Fardaoui',role:'Vice-president',desc:"Supporting the president and overseeing club operations."},{name:'Bilal Lahfari',role:'Advisor',desc:"Advising the board and guiding long‑term strategy."},{name:'Inas Bentounsi',role:'General Secretary',desc:"Managing administrative tasks and internal communication."}].map((m,idx)=> (
-              <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-6 text-center">
-                <div className="mx-auto w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center text-xl -mt-10">👤</div>
-                <h3 className="mt-3 text-base font-semibold">{m.name}</h3>
-                <div className="text-gray-400 text-xs">{m.role}</div>
-                <p className="text-gray-400 text-sm mt-1">{m.desc}</p>
-                <div className="flex items-center justify-center gap-4 mt-3 text-gray-300">
+            {[{ name: 'ANAS AMCHAAR', role: 'President', desc: "Leads the club's vision and overall strategy." }].map((m, idx) => (
+              <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center w-full max-w-md">
+                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
+                <div className="text-gray-400 text-sm">{m.role}</div>
+                <p className="text-gray-300 text-base mt-2">{m.desc}</p>
+                <div className="flex items-center justify-center gap-5 mt-4 text-gray-300">
                   <a href="#" aria-label="LinkedIn" className="hover:text-green-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                   </a>
                   <a href="#" aria-label="GitHub" className="hover:text-green-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.4.7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.8.5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6 .1 .8-.2 .8-.5v-2c-3.4 .7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6 .1-.6 .1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8 .1-.7 .4-1.1 .7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4 .5-2.5 1.2-3.4-.1-.3-.5-1.6 .1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7 .2 3 .1 3.3 .8 .9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3 .4 .3 .7 .9 .7 1.9v2.8c0 .3 .2 .6 .8 .5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
                   </a>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Tier 3 */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
-            {[{name:'Marouan Ezbakhe',role:'Media Manager',desc:'Crafting and executing media and outreach strategy.'},{name:'Aya Chehhal',role:'Head of Design',desc:'Leading the design system and brand identity.'},{name:'Mohammed Hamdouch',role:'Head of Sponsoring',desc:'Leading sponsorship initiatives and partnerships.'}].map((m,idx)=> (
-              <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-6 text-center">
-                <div className="mx-auto w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center text-xl -mt-10">👤</div>
-                <h3 className="mt-3 text-base font-semibold">{m.name}</h3>
-                <div className="text-gray-400 text-xs">{m.role}</div>
-                <p className="text-gray-400 text-sm mt-1">{m.desc}</p>
-                <div className="flex items-center justify-center gap-4 mt-3 text-gray-300">
+          {/* Row 2: 3 */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-10">
+            {[
+              { name: 'Ilyas Fardaoui', role: 'Vice-president', desc: 'Supporting the president and overseeing club operations.' },
+              { name: 'Bilal Lahfari', role: 'Advisor', desc: 'Advising the board and guiding long‑term strategy.' },
+              { name: 'Inas Bentounsi', role: 'General Secretary', desc: 'Managing administrative tasks and internal communication.' },
+            ].map((m, idx) => (
+              <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center">
+                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
+                <div className="text-gray-400 text-sm">{m.role}</div>
+                <p className="text-gray-300 text-base mt-2">{m.desc}</p>
+                <div className="flex items-center justify-center gap-5 mt-4 text-gray-300">
                   <a href="#" aria-label="LinkedIn" className="hover:text-green-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                   </a>
                   <a href="#" aria-label="GitHub" className="hover:text-green-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.4.7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.8.5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6 .1 .8-.2 .8-.5v-2c-3.4 .7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6 .1-.6 .1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8 .1-.7 .4-1.1 .7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4 .5-2.5 1.2-3.4-.1-.3-.5-1.6 .1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7 .2 3 .1 3.3 .8 .9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3 .4 .3 .7 .9 .7 1.9v2.8c0 .3 .2 .6 .8 .5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
                   </a>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Tier 4 */}
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[{name:'Basma Chaouki',role:'Head of Training 1',desc:'Training programs and workshops.'},{name:'Ahmed Bahlaoui',role:'Head of Training 2',desc:'Training logistics and support.'},{name:'Ridouan Lachgar',role:'Head of Events 1',desc:'Event planning and coordination.'},{name:'Taha Bachir El Bouhali',role:'Head of Events 2',desc:'Event operations and partnerships.'},{name:'Rim Benamar',role:'Head of Communications & External Relations',desc:'Communications, PR, and partnerships.'}].map((m,idx)=> (
-              <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-6 text-center">
-                <div className="mx-auto w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center text-xl -mt-10">👤</div>
-                <h3 className="mt-3 text-base font-semibold">{m.name}</h3>
-                <div className="text-gray-400 text-xs">{m.role}</div>
-                <p className="text-gray-400 text-sm mt-1">{m.desc}</p>
-                <div className="flex items-center justify-center gap-4 mt-3 text-gray-300">
+          {/* Row 3: 4 */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-10">
+            {[
+              { name: 'Marouan Ezbakhe', role: 'Media Manager', desc: 'Crafting and executing media and outreach strategy.' },
+              { name: 'Aya Chehhal', role: 'Head of Design', desc: 'Leading the design system and brand identity.' },
+              { name: 'Mohammed Hamdouch', role: 'Head of Sponsoring', desc: 'Leading sponsorship initiatives and partnerships.' },
+              { name: 'Basma Chaouki', role: 'Head of Training 1', desc: 'Training programs and workshops.' },
+            ].map((m, idx) => (
+              <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center">
+                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
+                <div className="text-gray-400 text-sm">{m.role}</div>
+                <p className="text-gray-300 text-base mt-2">{m.desc}</p>
+                <div className="flex items-center justify-center gap-5 mt-4 text-gray-300">
                   <a href="#" aria-label="LinkedIn" className="hover:text-green-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                   </a>
                   <a href="#" aria-label="GitHub" className="hover:text-green-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.4.7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3.4.3.7.9.7 1.9v2.8c0 .3.2.6.8.5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6 .1 .8-.2 .8-.5v-2c-3.4 .7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6 .1-.6 .1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8 .1-.7 .4-1.1 .7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4 .5-2.5 1.2-3.4-.1-.3-.5-1.6 .1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7 .2 3 .1 3.3 .8 .9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3 .4 .3 .7 .9 .7 1.9v2.8c0 .3 .2 .6 .8 .5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
                   </a>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Row 4: 4 */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {[
+              { name: 'Ahmed Bahlaoui', role: 'Head of Training 2', desc: 'Training logistics and support.' },
+              { name: 'Ridouan Lachgar', role: 'Head of Events 1', desc: 'Event planning and coordination.' },
+              { name: 'Taha Bachir El Bouhali', role: 'Head of Events 2', desc: 'Event operations and partnerships.' },
+              { name: 'Rim Benamar', role: 'Head of Communications & External Relations', desc: 'Communications, PR, and partnerships.' },
+            ].map((m, idx) => (
+              <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center">
+                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
+                <div className="text-gray-400 text-sm">{m.role}</div>
+                <p className="text-gray-300 text-base mt-2">{m.desc}</p>
+                <div className="flex items-center justify-center gap-5 mt-4 text-gray-300">
+                  <a href="#" aria-label="LinkedIn" className="hover:text-green-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2c-1.1 0-2 .9-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  </a>
+                  <a href="#" aria-label="GitHub" className="hover:text-green-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M12 .5a12 12 0 0 0-3.8 23.4c.6 .1 .8-.2 .8-.5v-2c-3.4 .7-4.1-1.6-4.1-1.6-.5-1.3-1.1-1.7-1.1-1.7-.9-.6 .1-.6 .1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8 .1-.7 .4-1.1 .7-1.3-2.7-.3-5.6-1.4-5.6-6.3 0-1.4 .5-2.5 1.2-3.4-.1-.3-.5-1.6 .1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18 4.6 19 5 19 5c.6 1.7 .2 3 .1 3.3 .8 .9 1.2 2 1.2 3.4 0 4.9-2.9 6-5.6 6.3 .4 .3 .7 .9 .7 1.9v2.8c0 .3 .2 .6 .8 .5A12 12 0 0 0 12 .5Z" clipRule="evenodd"/></svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
