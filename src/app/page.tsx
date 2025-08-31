@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Prefix asset URLs with the repository base path in production (GitHub Pages)
+// Helper function for asset paths (same as Academy)
 const getAssetPath = (path: string) => {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/Fatal-error-website' : '';
   return `${basePath}${path}`;
 };
 
@@ -18,7 +18,7 @@ export default function Home() {
             <div className="flex-1">
               <Link href="/" className="inline-flex items-center space-x-4">
                 <Image
-                  src={getAssetPath("/images/fatal%20error%20logo%20.png")}
+                  src={getAssetPath("/images/fatal error logo .png")}
                   alt="Fatal Error Logo"
                   width={128}
                   height={128}
@@ -58,7 +58,7 @@ export default function Home() {
         {/* Background Logo */}
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <Image
-            src={getAssetPath("/images/fatal%20error%20logo%20.png")}
+            src={getAssetPath("/images/fatal error logo .png")}
             alt="Fatal Error Logo Background"
             width={1000}
             height={1000}
@@ -72,7 +72,7 @@ export default function Home() {
             {/* Large Logo Display */}
             <div className="mb-10">
                         <Image
-                src={getAssetPath("/images/fatal%20error%20logo%20.png")}
+                src={getAssetPath("/images/fatal error logo .png")}
                 alt="Fatal Error Logo"
                 width={260}
                 height={260}
@@ -117,7 +117,7 @@ export default function Home() {
             <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
               <div className="md:col-span-2 flex items-center justify-center">
                 <Image
-                  src={getAssetPath("/images/fatal%20error%20logo%20.png")}
+                  src={getAssetPath("/images/fatal error logo .png")}
                   alt="Fatal Error Logo"
                   width={360}
                   height={360}
