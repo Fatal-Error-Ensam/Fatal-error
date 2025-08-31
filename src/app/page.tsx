@@ -157,7 +157,13 @@ export default function Home() {
           <div className="flex justify-center mb-10">
             {[{ name: 'ANAS AMCHAAR', role: 'President', desc: "Leads the club's vision and overall strategy." }].map((m, idx) => (
               <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center w-full max-w-md">
-                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                {m.photo ? (
+                  <div className="mx-auto w-20 h-20 -mt-12">
+                    <Image src={getAssetPath(m.photo)} alt={m.name} width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                )}
                 <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
                 <div className="text-gray-400 text-sm">{m.role}</div>
                 <p className="text-gray-300 text-base mt-2">{m.desc}</p>
@@ -176,12 +182,18 @@ export default function Home() {
           {/* Row 2: 3 */}
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-10">
             {[
-              { name: 'Ilyas Fardaoui', role: 'Vice-president', desc: 'Supporting the president and overseeing club operations.' },
+              { name: 'Ilyas Fardaoui', role: 'Vice-president', desc: 'Supporting the president and overseeing club operations.', photo: '/images/ilyasfardaoui.jpg' },
               { name: 'Bilal Lahfari', role: 'Advisor', desc: 'Advising the board and guiding long‑term strategy.' },
-              { name: 'Inas Bentounsi', role: 'General Secretary', desc: 'Managing administrative tasks and internal communication.' },
+              { name: 'Inas Bentounsi', role: 'General Secretary', desc: 'Managing administrative tasks and internal communication.', photo: '/images/inesbentounsi.jpg' },
             ].map((m, idx) => (
               <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center">
-                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                {m.photo ? (
+                  <div className="mx-auto w-20 h-20 -mt-12">
+                    <Image src={getAssetPath(m.photo)} alt={m.name} width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                )}
                 <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
                 <div className="text-gray-400 text-sm">{m.role}</div>
                 <p className="text-gray-300 text-base mt-2">{m.desc}</p>
@@ -200,13 +212,19 @@ export default function Home() {
           {/* Row 3: 4 */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-10">
             {[
-              { name: 'Marouan Ezbakhe', role: 'Media Manager', desc: 'Crafting and executing media and outreach strategy.' },
+              { name: 'Marouan Ezbakhe', role: 'Media Manager', desc: 'Crafting and executing media and outreach strategy.', photo: '/images/marouanezbakhe.jpg' },
               { name: 'Aya Chehhal', role: 'Head of Design', desc: 'Leading the design system and brand identity.' },
-              { name: 'Mohammed Hamdouch', role: 'Head of Sponsoring', desc: 'Leading sponsorship initiatives and partnerships.' },
-              { name: 'Basma Chaouki', role: 'Head of Training 1', desc: 'Training programs and workshops.' },
+              { name: 'Mohammed Hamdouch', role: 'Head of Sponsoring', desc: 'Leading sponsorship initiatives and partnerships.', photo: '/images/mohammedhamdouch.jpg' },
+              { name: 'Basma Chaouki', role: 'Head of Training 1', desc: 'Training programs and workshops.', photo: '/images/basmachaouki.jpg' },
             ].map((m, idx) => (
               <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center">
-                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                {m.photo ? (
+                  <div className="mx-auto w-20 h-20 -mt-12">
+                    <Image src={getAssetPath(m.photo)} alt={m.name} width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                )}
                 <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
                 <div className="text-gray-400 text-sm">{m.role}</div>
                 <p className="text-gray-300 text-base mt-2">{m.desc}</p>
@@ -225,13 +243,19 @@ export default function Home() {
           {/* Row 4: 4 */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {[
-              { name: 'Ahmed Bahlaoui', role: 'Head of Training 2', desc: 'Training logistics and support.' },
-              { name: 'Ridouan Lachgar', role: 'Head of Events 1', desc: 'Event planning and coordination.' },
-              { name: 'Taha Bachir El Bouhali', role: 'Head of Events 2', desc: 'Event operations and partnerships.' },
-              { name: 'Rim Benamar', role: 'Head of Communications & External Relations', desc: 'Communications, PR, and partnerships.' },
+              { name: 'Ahmed Bahlaoui', role: 'Head of Training 2', desc: 'Training logistics and support.', photo: '/images/ahmedbahlaoui.jpg' },
+              { name: 'Ridouan Lachgar', role: 'Head of Events 1', desc: 'Event planning and coordination.', photo: '/images/redouanlachgar.jpg' },
+              { name: 'Taha Bachir El Bouhali', role: 'Head of Events 2', desc: 'Event operations and partnerships.', photo: '/images/tahabachirelbouhali.jpg' },
+              { name: 'Rim Benamar', role: 'Head of Communications & External Relations', desc: 'Communications, PR, and partnerships.', photo: '/images/rimbenamar.jpg' },
             ].map((m, idx) => (
               <div key={idx} className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-8 text-center">
-                <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                {m.photo ? (
+                  <div className="mx-auto w-20 h-20 -mt-12">
+                    <Image src={getAssetPath(m.photo)} alt={m.name} width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="mx-auto w-20 h-20 rounded-full bg-gray-800 flex items-center justify-center text-3xl -mt-12">👤</div>
+                )}
                 <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
                 <div className="text-gray-400 text-sm">{m.role}</div>
                 <p className="text-gray-300 text-base mt-2">{m.desc}</p>
