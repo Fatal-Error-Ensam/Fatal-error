@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Helper function for asset paths
-const getAssetPath = (path: string) => {
-  const basePath = process.env.NODE_ENV === 'production' ? (process.env.NEXT_PUBLIC_BASE_PATH || '') : '';
-  return `${basePath}${path}`;
-};
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -18,7 +12,7 @@ export default function Home() {
             <div className="flex-1">
               <Link href="/" className="inline-flex items-center space-x-4">
                 <Image
-                  src={getAssetPath("/images/fatal error logo .png")}
+                  src={"/images/fatal error logo .png"}
                   alt="Fatal Error Logo"
                   width={128}
                   height={128}
@@ -58,7 +52,7 @@ export default function Home() {
         {/* Background Logo */}
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <Image
-            src={getAssetPath("/images/fatal error logo .png")}
+            src={"/images/fatal error logo .png"}
             alt="Fatal Error Logo Background"
             width={1000}
             height={1000}
@@ -72,7 +66,7 @@ export default function Home() {
             {/* Large Logo Display */}
             <div className="mb-10">
                         <Image
-                src={getAssetPath("/images/fatal error logo .png")}
+                src={"/images/fatal error logo .png"}
                 alt="Fatal Error Logo"
                 width={260}
                 height={260}
