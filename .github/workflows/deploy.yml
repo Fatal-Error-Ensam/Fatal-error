@@ -32,28 +32,24 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: club-website/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: club-website
         run: npm ci
 
       - name: Lint
-        working-directory: club-website
         run: npm run lint:check
 
       - name: Type check
-        working-directory: club-website
         run: npm run type-check
 
       - name: Build and export
-        working-directory: club-website
         run: npm run deploy
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: club-website/out
+          path: out
 
   deploy:
     needs: build
