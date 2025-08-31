@@ -398,7 +398,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-bold">Contact Us</h2>
-            <p className="text-gray-400 mt-2 text-lg">We'd love to hear from you. Fill the form below.</p>
+            <p className="text-gray-400 mt-2 text-lg">We&apos;d love to hear from you. Fill the form below.</p>
           </div>
           <form action="https://formsubmit.co/anass.amchaar04@gmail.com" method="POST" className="bg-black/50 border border-gray-800 rounded-2xl p-6 md:p-8">
             <input type="hidden" name="_subject" value="New message from Fatal Error site" />
