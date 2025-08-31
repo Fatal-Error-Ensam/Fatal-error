@@ -42,6 +42,7 @@ jobs:
       - name: Build and export
         env:
           NODE_ENV: production
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: npm run deploy
 
       - name: Upload artifact

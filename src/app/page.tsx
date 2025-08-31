@@ -3,7 +3,7 @@ import Link from "next/link";
 
 // Helper function for asset paths
 const getAssetPath = (path: string) => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/Fatal-error-website' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? (process.env.NEXT_PUBLIC_BASE_PATH || '') : '';
   return `${basePath}${path}`;
 };
 
