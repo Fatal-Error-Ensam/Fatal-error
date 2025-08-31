@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import fatalErrorLogo from "../../public/images/fatal error logo .png";
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
             <div className="flex-1">
               <Link href="/" className="inline-flex items-center space-x-4">
                 <Image
-                  src={fatalErrorLogo}
+                  src={"/images/fatal-error-logo.png"}
                   alt="Fatal Error Logo"
                   width={128}
                   height={128}
@@ -53,7 +52,7 @@ export default function Home() {
         {/* Background Logo */}
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <Image
-            src={fatalErrorLogo}
+            src={"/images/fatal-error-logo.png"}
             alt="Fatal Error Logo Background"
             width={1000}
             height={1000}
@@ -67,7 +66,7 @@ export default function Home() {
             {/* Large Logo Display */}
             <div className="mb-10">
                         <Image
-                src={fatalErrorLogo}
+                src={"/images/fatal-error-logo.png"}
                 alt="Fatal Error Logo"
                 width={260}
                 height={260}
@@ -112,7 +111,7 @@ export default function Home() {
             <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
               <div className="md:col-span-2 flex items-center justify-center">
                 <Image
-                  src={fatalErrorLogo}
+                  src={"/images/fatal-error-logo.png"}
                   alt="Fatal Error Logo"
                   width={360}
                   height={360}
