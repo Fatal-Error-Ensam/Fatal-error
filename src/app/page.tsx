@@ -12,7 +12,7 @@ export default function Home() {
             <div className="flex-1">
               <Link href="/" className="inline-flex items-center space-x-4">
                 <Image
-                  src={"/images/fatal-error-logo.png"}
+                  src={"/images/fatal%20error%20logo%20.png"}
                   alt="Fatal Error Logo"
                   width={128}
                   height={128}
@@ -52,7 +52,7 @@ export default function Home() {
         {/* Background Logo */}
         <div className="absolute inset-0 flex items-center justify-center opacity-5">
           <Image
-            src={"/images/fatal-error-logo.png"}
+            src={"/images/fatal%20error%20logo%20.png"}
             alt="Fatal Error Logo Background"
             width={1000}
             height={1000}
@@ -66,7 +66,7 @@ export default function Home() {
             {/* Large Logo Display */}
             <div className="mb-10">
                         <Image
-                src={"/images/fatal-error-logo.png"}
+                src={"/images/fatal%20error%20logo%20.png"}
                 alt="Fatal Error Logo"
                 width={260}
                 height={260}
@@ -111,7 +111,7 @@ export default function Home() {
             <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
               <div className="md:col-span-2 flex items-center justify-center">
                 <Image
-                  src={"/images/fatal-error-logo.png"}
+                  src={"/images/fatal%20error%20logo%20.png"}
                   alt="Fatal Error Logo"
                   width={360}
                   height={360}
