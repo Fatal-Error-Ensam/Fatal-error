@@ -16,10 +16,6 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
-env:
-  # Ensure Next.js picks up production basePath/assetPrefix
-  NODE_ENV: production
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -44,6 +40,8 @@ jobs:
         run: npm run type-check
 
       - name: Build and export
+        env:
+          NODE_ENV: production
         run: npm run deploy
 
       - name: Upload artifact
