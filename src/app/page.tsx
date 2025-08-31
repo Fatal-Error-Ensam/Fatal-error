@@ -111,7 +111,7 @@ export default function Home() {
             <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
               <div className="md:col-span-2 flex items-center justify-center">
                 <Image
-                  src={getAssetPath("/images/fatal error logo .png")}
+                  src={"/images/fatal%20error%20logo%20.png"}
                   alt="Fatal Error Logo"
                   width={360}
                   height={360}
